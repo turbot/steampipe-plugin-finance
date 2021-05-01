@@ -1,0 +1,3 @@
+connection "finance" {
+  plugin = "finance"
+}
