@@ -13,7 +13,7 @@ import (
 func tableFinanceQuote(ctx context.Context) *plugin.Table {
 	return &plugin.Table{
 		Name:        "finance_quote",
-		Description: "Quotes configured for the account.",
+		Description: "Most recent available quote for the given symbol.",
 		List: &plugin.ListConfig{
 			Hydrate:    listQuote,
 			KeyColumns: plugin.SingleColumn("symbol"),
