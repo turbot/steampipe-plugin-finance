@@ -1,6 +1,6 @@
 ---
 organization: Turbot
-category: ["internet"]
+category: ["media"]
 icon_url: "/images/plugins/turbot/finance.svg"
 brand_color: "#55CC44"
 display_name: Finance
