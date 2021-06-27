@@ -21,7 +21,7 @@ func Plugin(ctx context.Context) *plugin.Plugin {
 			"finance_quote":                 tableFinanceQuote(ctx),
 			"finance_quote_daily":           tableFinanceQuoteDaily(ctx),
 			"finance_quote_hourly":          tableFinanceQuoteHourly(ctx),
-			"finance_earning_history":       tableFinanceEarningHistory(ctx),
+			"finance_eps_history":           tableFinanceEpsHistory(ctx),
 		},
 	}
 	return p
