@@ -17,3 +17,7 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
+
+**/*/adapters/**/index.ts
+.vscode/launch.json
+steampipe-plugin-finance
