@@ -1,3 +1,10 @@
+## v0.0.2 [2021-07-02]
+
+_Enhancements_
+
+- Updated plugin category from `internet` to `media`
+- Updated plugin license to Apache 2.0 per [turbot/steampipe#488](https://github.com/turbot/steampipe/issues/488)
+
 ## v0.0.1 [2021-05-20]
 
 _What's new?_
