@@ -15,6 +15,9 @@ func Plugin(ctx context.Context) *plugin.Plugin {
 			Schema:      ConfigSchema,
 		},
 		DefaultTransform: transform.FromGo(),
+		DefaultConcurrency: &plugin.DefaultConcurrencyConfig{
+			TotalMaxConcurrency: 10,
+		},
 		TableMap: map[string]*plugin.Table{
 			"finance_us_sec_public_company": tableFinanceUsSecPublicCompany(ctx),
 			"finance_us_sec_filer":          tableFinanceUsSecFiler(ctx),
