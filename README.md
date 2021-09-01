@@ -6,7 +6,7 @@ Use SQL to query financial data including quotes and public company information.
 
 - **[Get started →](https://hub.steampipe.io/plugins/turbot/finance)**
 - Documentation: [Table definitions & examples](https://hub.steampipe.io/plugins/turbot/finance/tables)
-- Community: [Discussion forums](https://github.com/turbot/steampipe/discussions)
+- Community: [Slack Channel](https://join.slack.com/t/steampipe/shared_invite/zt-oij778tv-lYyRTWOTMQYBVAbtPSWs3g)
 - Get involved: [Issues](https://github.com/turbot/steampipe-plugin-finance/issues)
 
 ## Quick start
@@ -42,7 +42,7 @@ Prerequisites:
 Clone:
 
 ```sh
-git clone git@github.com:turbot/steampipe-plugin-finance
+git clone https://github.com/turbot/steampipe-plugin-finance.git
 cd steampipe-plugin-finance
 ```
 
@@ -73,7 +73,7 @@ Further reading:
 
 ## Contributing
 
-Please see the [contribution guidelines](https://github.com/turbot/steampipe/blob/main/CONTRIBUTING.md) and our [code of conduct](https://github.com/turbot/steampipe/blob/main/CODE_OF_CONDUCT.md). All contributions are subject to the [MPL-2.0 open source license](https://github.com/turbot/steampipe-plugin-finance/blob/main/LICENSE).
+Please see the [contribution guidelines](https://github.com/turbot/steampipe/blob/main/CONTRIBUTING.md) and our [code of conduct](https://github.com/turbot/steampipe/blob/main/CODE_OF_CONDUCT.md). All contributions are subject to the [Apache 2.0 open source license](https://github.com/turbot/steampipe-plugin-finance/blob/main/LICENSE).
 
 `help wanted` issues:
 
