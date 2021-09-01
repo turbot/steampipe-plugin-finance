@@ -1,3 +1,9 @@
+## v0.0.3 [2021-08-31]
+
+_Bug fixes_
+
+- Pass User-Agent to finance_us_sec_* tables to avoid throttling errors.
+
 ## v0.0.2 [2021-07-02]
 
 _Enhancements_
