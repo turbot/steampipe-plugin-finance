@@ -34,7 +34,7 @@ func tableFinanceUsSecFiler(ctx context.Context) *plugin.Table {
 func listUsSecFiler(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (interface{}, error) {
 	quals := d.KeyColumnQuals
 	symbol := quals["symbol"].GetStringValue()
-	filer, err := core.GetFiler(symbol)
+	filer, err := core.GetFilerWithHeaders(symbol, map[string]string{"User-Agent": "Steampipe/v0.x"})
 	if err != nil {
 		plugin.Logger(ctx).Error("finance_us_sec_filer.listUsSecFiler", "query_error", err)
 		return nil, err

@@ -24,7 +24,7 @@ func tableFinanceUsSecPublicCompany(ctx context.Context) *plugin.Table {
 }
 
 func listUsSecPublicCompany(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (interface{}, error) {
-	companies, err := core.GetPublicCompanies()
+	companies, err := core.GetPublicCompaniesWithHeaders(map[string]string{"User-Agent": "Steampipe/v0.x"})
 	if err != nil {
 		plugin.Logger(ctx).Error("finance_us_sec_public_company.listUsSecPublicCompany", "query_error", err)
 		return nil, err

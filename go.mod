@@ -8,3 +8,5 @@ require (
 	github.com/shopspring/decimal v1.2.0
 	github.com/turbot/steampipe-plugin-sdk v0.2.7
 )
+
+replace github.com/piquette/edgr => github.com/e-gineer/edgr v0.0.2-0.20210901021602-7664639af765
