@@ -1,3 +1,10 @@
+## v0.1.0 [2021-12-15]
+
+_Enhancements_
+
+- Recompiled plugin with [steampipe-plugin-sdk-v1.8.2](https://github.com/turbot/steampipe-plugin-sdk/blob/main/CHANGELOG.md#v182--2021-11-22) ([#7](https://github.com/turbot/steampipe-plugin-finance/pull/7))
+- Recompiled plugin with Go version 1.17 ([#7](https://github.com/turbot/steampipe-plugin-finance/pull/7))
+
 ## v0.0.3 [2021-08-31]
 
 _Bug fixes_
