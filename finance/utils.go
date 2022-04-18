@@ -31,17 +31,6 @@ func symbolString(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateDat
 	return s, nil
 }
 
-func cikString(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (interface{}, error) {
-	quals := d.KeyColumnQuals
-	s := quals["cik"].GetStringValue()
-	return s, nil
-}
-
-func formTypeString(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (interface{}, error) {
-	quals := d.KeyColumnQuals
-	s := quals["form_type"].GetStringValue()
-	return s, nil
-}
 
 func decimalToDouble(ctx context.Context, d *transform.TransformData) (interface{}, error) {
 	dec := d.Value.(decimal.Decimal)
