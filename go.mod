@@ -1,6 +1,6 @@
 module github.com/turbot/steampipe-plugin-finance
 
-go 1.17
+go 1.18
 
 require (
 	github.com/piquette/edgr v0.0.1
