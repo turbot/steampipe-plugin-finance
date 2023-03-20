@@ -5,9 +5,9 @@ import (
 
 	"github.com/piquette/edgr/core"
 
-	"github.com/turbot/steampipe-plugin-sdk/v4/grpc/proto"
-	"github.com/turbot/steampipe-plugin-sdk/v4/plugin"
-	"github.com/turbot/steampipe-plugin-sdk/v4/plugin/transform"
+	"github.com/turbot/steampipe-plugin-sdk/v5/grpc/proto"
+	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v5/plugin/transform"
 )
 
 func tableFinanceUsSecFiler(ctx context.Context) *plugin.Table {
@@ -32,7 +32,7 @@ func tableFinanceUsSecFiler(ctx context.Context) *plugin.Table {
 }
 
 func listUsSecFiler(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (interface{}, error) {
-	quals := d.KeyColumnQuals
+	quals := d.EqualsQuals
 	symbol := quals["symbol"].GetStringValue()
 	filer, err := core.GetFilerWithHeaders(symbol, map[string]string{"User-Agent": "Steampipe/v0.x"})
 	if err != nil {

@@ -7,7 +7,7 @@ import (
 	"github.com/piquette/finance-go/chart"
 	"github.com/piquette/finance-go/datetime"
 
-	"github.com/turbot/steampipe-plugin-sdk/v4/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
 )
 
 func tableFinanceQuoteHourly(ctx context.Context) *plugin.Table {
@@ -23,7 +23,7 @@ func tableFinanceQuoteHourly(ctx context.Context) *plugin.Table {
 }
 
 func listQuoteHourly(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (interface{}, error) {
-	quals := d.KeyColumnQuals
+	quals := d.EqualsQuals
 	symbol := quals["symbol"].GetStringValue()
 
 	// Hourly for 13 months

@@ -5,9 +5,9 @@ import (
 
 	"github.com/piquette/finance-go/quote"
 
-	"github.com/turbot/steampipe-plugin-sdk/v4/grpc/proto"
-	"github.com/turbot/steampipe-plugin-sdk/v4/plugin"
-	"github.com/turbot/steampipe-plugin-sdk/v4/plugin/transform"
+	"github.com/turbot/steampipe-plugin-sdk/v5/grpc/proto"
+	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v5/plugin/transform"
 )
 
 func tableFinanceQuote(ctx context.Context) *plugin.Table {
@@ -76,7 +76,7 @@ func tableFinanceQuote(ctx context.Context) *plugin.Table {
 }
 
 func listQuote(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (interface{}, error) {
-	quals := d.KeyColumnQuals
+	quals := d.EqualsQuals
 	symbol := quals["symbol"].GetStringValue()
 	q, err := quote.Get(symbol)
 	if err != nil {
