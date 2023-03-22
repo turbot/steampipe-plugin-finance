@@ -5,8 +5,8 @@ import (
 
 	"github.com/piquette/edgr/core"
 
-	"github.com/turbot/steampipe-plugin-sdk/v4/grpc/proto"
-	"github.com/turbot/steampipe-plugin-sdk/v4/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v5/grpc/proto"
+	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
 )
 
 func tableFinanceUsSecPublicCompany(ctx context.Context) *plugin.Table {
