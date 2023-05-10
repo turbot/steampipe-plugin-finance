@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/piquette/edgr v0.0.1
-	github.com/piquette/finance-go v1.0.0
+	github.com/piquette/finance-go v1.1.0
 	github.com/shopspring/decimal v1.2.0
 	github.com/turbot/steampipe-plugin-sdk/v5 v5.3.0
 )
