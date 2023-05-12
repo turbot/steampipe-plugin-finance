@@ -1,3 +1,9 @@
+## v0.5.0 [2023-05-12]
+
+_Dependencies_
+
+- Recompiled plugin with [finance-go v1.1.0](https://github.com/piquette/finance-go/releases/tag/v1.1.0) which fixes the upstream API errors. ([#23](https://github.com/turbot/steampipe-plugin-finance/pull/23))
+
 ## v0.4.0 [2023-03-23]
 
 _Dependencies_
