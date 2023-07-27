@@ -6,7 +6,7 @@ Use SQL to query financial data including quotes and public company information.
 
 - **[Get started →](https://hub.steampipe.io/plugins/turbot/finance)**
 - Documentation: [Table definitions & examples](https://hub.steampipe.io/plugins/turbot/finance/tables)
-- Community: [Slack Channel](https://steampipe.io/community/join)
+- Community: [Join #steampipe on Slack →](https://turbot.com/community/join)
 - Get involved: [Issues](https://github.com/turbot/steampipe-plugin-finance/issues)
 
 ## Quick start
