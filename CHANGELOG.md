@@ -1,3 +1,9 @@
+## v0.6.0 [2023-08-17]
+
+_Dependencies_
+
+- Recompiled plugin with `finance-go v1.1.1-0.20230807033903-430a57233430` which fixes the `can't find quote for symbol` error. ([#28](https://github.com/turbot/steampipe-plugin-finance/pull/28))
+
 ## v0.5.0 [2023-05-12]
 
 _Dependencies_
