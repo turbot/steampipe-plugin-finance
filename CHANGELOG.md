@@ -2,7 +2,7 @@
 
 _Dependencies_
 
-- Recompiled plugin with `finance-go v1.1.1-0.20230807033903-430a57233430` which fixes the `can't find quote for symbol` error. ([#28](https://github.com/turbot/steampipe-plugin-finance/pull/28))
+- Recompiled plugin with `finance-go v1.1.1-0.20230807033903-430a57233430` that fixes the plugin to return results consistently instead of returning errors. ([#28](https://github.com/turbot/steampipe-plugin-finance/pull/28))
 
 ## v0.5.0 [2023-05-12]
 
