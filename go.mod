@@ -6,7 +6,7 @@ require (
 	github.com/piquette/edgr v0.0.1
 	github.com/piquette/finance-go v1.1.1-0.20230807033903-430a57233430
 	github.com/shopspring/decimal v1.2.0
-	github.com/turbot/steampipe-plugin-sdk/v5 v5.6.1
+	github.com/turbot/steampipe-plugin-sdk/v5 v5.6.2
 )
 
 require (
