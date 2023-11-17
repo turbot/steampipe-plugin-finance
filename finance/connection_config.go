@@ -6,9 +6,14 @@ import (
 )
 
 type financeConfig struct {
+	IEXAPIToken *string `cty:"iex_api_token,optional"`
 }
 
-var ConfigSchema = map[string]*schema.Attribute{}
+var ConfigSchema = map[string]*schema.Attribute{
+	"iex_api_token": {
+		Type: schema.TypeString,
+	},
+}
 
 func ConfigInstance() interface{} {
 	return &financeConfig{}

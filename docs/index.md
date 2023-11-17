@@ -14,7 +14,7 @@ og_image: "/images/plugins/turbot/finance-social-graphic.png"
 
 [Steampipe](https://steampipe.io) is an open source CLI to instantly query cloud APIs using SQL.
 
-Financial data is queried from multiple sources including [Yahoo Finance](https://finance.yahoo.com/) and the [US SEC Edgar](https://www.sec.gov/edgar.shtml) service.
+Financial data is queried from multiple sources including [Yahoo Finance](https://finance.yahoo.com/), [US SEC Edgar](https://www.sec.gov/edgar.shtml) and the [IEX Cloud](https://iexcloud.io/documentation/)service.
 
 For example:
 
@@ -63,8 +63,12 @@ Installing the latest finance plugin will create a config file (`~/.steampipe/co
 ```hcl
 connection "finance" {
   plugin = "finance"
+
+  iex_api_token = "pk_3746625324373hrf7fa44d2983d34e"
 }
 ```
+
+- `iex_api_token`(Optional) - An additional header name and its corresponding value to be sent to the server. If the header name is configured, the value must not be empty.
 
 ## Get involved
 
