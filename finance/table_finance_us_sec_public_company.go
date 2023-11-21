@@ -91,7 +91,7 @@ func listUsSecPublicCompany(ctx context.Context, d *plugin.QueryData, _ *plugin.
 		Get(apiUrl)
 
 	if err != nil {
-		plugin.Logger(ctx).Error("finance_us_sec_public_company.listUsSecPublicCompany", "Error on request: ", err)
+		plugin.Logger(ctx).Error("finance_us_sec_public_company.listUsSecPublicCompany", "query_error", err)
 		return nil, err
 	}
 
