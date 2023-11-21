@@ -68,7 +68,7 @@ connection "finance" {
 }
 ```
 
-- `iex_api_token`(Optional) - An additional header name and its corresponding value to be sent to the server. If the header name is configured, the value must not be empty.
+- `iex_api_token` (Optional) - An additional header name and its corresponding value to be sent to the server. If the header name is configured, the value must not be empty.
 
 ## Get involved
 
