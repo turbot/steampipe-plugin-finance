@@ -84,6 +84,7 @@ require (
 	github.com/tdewolff/minify v2.3.6+incompatible // indirect
 	github.com/tdewolff/parse v2.3.4+incompatible // indirect
 	github.com/tkrajina/go-reflector v0.5.6 // indirect
+	github.com/turbot/edgr v0.0.1 // indirect
 	github.com/turbot/go-kit v0.8.0-rc.0 // indirect
 	github.com/ulikunitz/xz v0.5.10 // indirect
 	github.com/zclconf/go-cty v1.14.0 // indirect
@@ -120,5 +121,3 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	k8s.io/apimachinery v0.25.3 // indirect
 )
-
-replace github.com/piquette/edgr => github.com/e-gineer/edgr v0.0.2-0.20210901021602-7664639af765

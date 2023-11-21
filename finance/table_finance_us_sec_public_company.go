@@ -4,8 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/go-resty/resty/v2"
-
+	"github.com/turbot/edgr/core"
 	"github.com/turbot/steampipe-plugin-sdk/v5/grpc/proto"
 	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
 	"github.com/turbot/steampipe-plugin-sdk/v5/plugin/transform"
@@ -39,29 +38,9 @@ func tableFinanceUsSecPublicCompany(ctx context.Context) *plugin.Table {
 	}
 }
 
-type Company struct {
-	CIK                 string `json:"cik"`
-	Currency            string `json:"currency"`
-	Date                string `json:"date"`
-	Exchange            string `json:"exchange"`
-	ExchangeName        string `json:"exchangeName"`
-	ExchangeSegment     string `json:"exchangeSegment"`
-	ExchangeSegmentName string `json:"exchangeSegmentName"`
-	ExchangeSuffix      string `json:"exchangeSuffix"`
-	FIGI                string `json:"figi"`
-	IEXID               string `json:"iexId"`
-	IsEnabled           bool   `json:"isEnabled"`
-	LEI                 string `json:"lei"`
-	Name                string `json:"name"`
-	Region              string `json:"region"`
-	Symbol              string `json:"symbol"`
-	Type                string `json:"type"`
-	// Define other fields based on the API response
-}
-
 func listUsSecPublicCompany(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (interface{}, error) {
 
-	client := resty.New()
+	// client := resty.New()
 
 	// We were using the SDK from github.com/piquette/edgr/core to retrieve Security Symbols Reference Data.
 	// However, the SDK is currently encountering a Forbidden error when accessing the endpoint https://api.iextrading.com/1.0/ref-data/symbols,
@@ -70,38 +49,19 @@ func listUsSecPublicCompany(ctx context.Context, d *plugin.QueryData, _ *plugin.
 	// Fortunately, the new API endpoint, as described in the documentation (https://iexcloud.io/docs/core/REF_DATA#security-symbols-reference-data),
 	// is now providing the expected data.
 	// For further discussions regarding the legacy and new API endpoints, please refer to this discussion thread: https://infinitekind.tenderapp.com/discussions/problems/57171-iex-trading.
-	apiUrl := "https://api.iex.cloud/v1/data/core/REF_DATA/symbols"
 
 	config := GetConfig(d.Connection)
 	if config.IEXAPIToken == nil {
 		return nil, fmt.Errorf("partial credentials found in connection config, missing: iex_api_token")
 	}
 
-	var pageCompanies []Company
-
-	// Making a GET request with pagination query parameters
-	resp, err := client.R().
-		SetHeaders(map[string]string{
-			"User-Agent": "Steampipe/v0.x",
-		}).
-		SetQueryParams(map[string]string{
-			"token": *config.IEXAPIToken,
-		}).
-		SetResult(&pageCompanies).
-		Get(apiUrl)
-
+	companies, err := core.GetPublicCompaniesWithHeaders(map[string]string{"token": *config.IEXAPIToken}, map[string]string{"User-Agent": "Steampipe/v0.x"})
 	if err != nil {
 		plugin.Logger(ctx).Error("finance_us_sec_public_company.listUsSecPublicCompany", "query_error", err)
 		return nil, err
 	}
-
-	if resp.IsError() {
-		plugin.Logger(ctx).Error("finance_us_sec_public_company.listUsSecPublicCompany", "Error from server: ", err)
-		return nil, fmt.Errorf("Error from server: " + resp.Status())
-	}
-
-	for _, company := range pageCompanies {
-		d.StreamListItem(ctx, company)
+	for _, c := range companies {
+		d.StreamListItem(ctx, c)
 	}
 	return nil, nil
 }
