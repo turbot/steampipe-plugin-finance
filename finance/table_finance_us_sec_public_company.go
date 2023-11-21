@@ -40,9 +40,7 @@ func tableFinanceUsSecPublicCompany(ctx context.Context) *plugin.Table {
 
 func listUsSecPublicCompany(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) (interface{}, error) {
 
-	// client := resty.New()
-
-	// We were using the SDK from github.com/piquette/edgr/core to retrieve Security Symbols Reference Data.
+	// We were using the SDK repo github.com/piquette/edgr/core to retrieve Security Symbols Reference Data.
 	// However, the SDK is currently encountering a Forbidden error when accessing the endpoint https://api.iextrading.com/1.0/ref-data/symbols,
 	// despite using a valid API token.
 	// We raised a support request (https://github.com/piquette/edgr/issues/3) to address the error; however, it has not yet been resolved.

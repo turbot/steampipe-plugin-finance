@@ -3,10 +3,9 @@ module github.com/turbot/steampipe-plugin-finance
 go 1.21
 
 require (
-	github.com/go-resty/resty/v2 v2.10.0
-	github.com/piquette/edgr v0.0.1
 	github.com/piquette/finance-go v1.1.1-0.20230807033903-430a57233430
 	github.com/shopspring/decimal v1.2.0
+	github.com/turbot/edgr v0.0.1
 	github.com/turbot/steampipe-plugin-sdk/v5 v5.6.2
 )
 
@@ -84,7 +83,6 @@ require (
 	github.com/tdewolff/minify v2.3.6+incompatible // indirect
 	github.com/tdewolff/parse v2.3.4+incompatible // indirect
 	github.com/tkrajina/go-reflector v0.5.6 // indirect
-	github.com/turbot/edgr v0.0.1 // indirect
 	github.com/turbot/go-kit v0.8.0-rc.0 // indirect
 	github.com/ulikunitz/xz v0.5.10 // indirect
 	github.com/zclconf/go-cty v1.14.0 // indirect
