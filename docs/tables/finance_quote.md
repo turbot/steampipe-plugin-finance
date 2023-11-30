@@ -1,24 +1,20 @@
-# Table: finance_quote
+---
+title: "Steampipe Table: finance_quote - Query Finance Quotes using SQL"
+description: "Allows users to query Finance Quotes, specifically the real-time stock prices and related financial details, providing insights into market trends and investment decisions."
+---
 
-Query prices for any symbol including:
+# Table: finance_quote - Query Finance Quotes using SQL
 
-| Type | Example Symbol | Example Name |
-|-|-|
-| Equities | `AMZN` | Amazon.com, Inc. |
-| International Equities | `WBC.AX` | Westpac FPO (Australian Stock Exchange in AUD) |
-| Indexes | `^FTSE` | FTSE 100 |
-| Options | `AMZN210507C02240000` | AMZN May 2021 2240.000 call |
-| Foreign exchange pairs | `AUDUSD=X` | AUD/USD |
-| Cryptocurrency pairs | `BTC-USD` | Bitcoin USD |
-| Futures | `NQ=F` | Nasdaq 100 Jun 21 |
-| ETFs | `VTI` | Vanguard Total Stock Market ETF |
-| Mutual Funds | `VFIAX` | Vanguard 500 Index Fd Admiral S |
+Finance Quotes is a resource that provides real-time stock prices and related financial details. It allows users to monitor and respond to market trends, making informed investment decisions. It offers a centralized way to set up and manage alerts for various financial resources, including stocks, mutual funds, ETFs, and more.
 
-Note: A `symbol` must be provided in all queries to this table.
+## Table Usage Guide
+
+The `finance_quote` table provides insights into real-time stock prices and related financial details. As a financial analyst or investor, explore specific details through this table, including stock prices, trading volume, market capitalization, and associated metadata. Utilize it to uncover information about market trends, make informed investment decisions, and monitor your investment portfolio.
 
 ## Examples
 
 ### Current price of Amazon stock
+Explore the current market value of a specific stock, in this case Amazon, to aid in financial decision making. This can be particularly useful for investors seeking up-to-date information for their portfolio management.
 
 ```sql
 select
@@ -32,6 +28,7 @@ where
 ```
 
 ### 52 week trading range for Bitcoin
+Analyze the fluctuations in Bitcoin's trading range over the past year. This can provide insights into the cryptocurrency's performance and volatility, helping to inform investment decisions.
 
 ```sql
 select
@@ -46,6 +43,7 @@ where
 ```
 
 ### Global exchange quotes for Westpac
+Analyze the settings to understand the market status of Westpac across different exchanges. This is beneficial for tracking the performance of Westpac's shares in real-time, across multiple markets.
 
 ```sql
 select
