@@ -11,6 +11,11 @@ Finance Quote Hourly is a data set within the Finance service that provides hour
 
 The `finance_quote_hourly` table provides insights into hourly financial data. As a financial analyst or trader, explore hourly financial trends and patterns through this table, including price changes, volume changes, and other relevant financial data. Utilize it to uncover detailed information about financial changes, such as sudden spikes or drops, and gain a better understanding of financial market trends.
 
+**Important Notes**
+- You must specify the `symbol` in the `where` clause to query this table.
+- History is limited to the last 13 months.
+- Symbol types are defined in [finance_quote](./finance_quote).
+
 ## Examples
 
 ### Apple hourly price history (most recent first)

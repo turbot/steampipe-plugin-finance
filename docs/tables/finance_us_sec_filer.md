@@ -11,6 +11,9 @@ US SEC Filers are entities that are required to file statements, reports, and ot
 
 The `finance_us_sec_filer` table provides insights into US SEC Filers within the Finance service. As a financial analyst or data scientist, explore filer-specific details through this table, including their CIK, name, address, and associated metadata. Utilize it to uncover information about filers, such as their location, to aid in your financial analysis and decision-making processes.
 
+**Important Notes**
+- You must specify the `symbol` in the `where` clause to query this table.
+
 ## Examples
 
 ### Get filer details for Apple

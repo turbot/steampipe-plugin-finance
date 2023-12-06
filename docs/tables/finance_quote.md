@@ -11,6 +11,9 @@ Finance Quotes is a resource that provides real-time stock prices and related fi
 
 The `finance_quote` table provides insights into real-time stock prices and related financial details. As a financial analyst or investor, explore specific details through this table, including stock prices, trading volume, market capitalization, and associated metadata. Utilize it to uncover information about market trends, make informed investment decisions, and monitor your investment portfolio.
 
+**Important Notes**
+- You must specify the `symbol` in the `where` clause to query this table.
+
 ## Examples
 
 ### Current price of Amazon stock

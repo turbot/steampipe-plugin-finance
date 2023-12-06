@@ -11,6 +11,11 @@ The Finance Quote Daily is a resource in the Finance service that provides detai
 
 The `finance_quote_daily` table provides valuable insights into the daily financial performance of specific tickers. As a financial analyst or trader, you can explore detailed financial data through this table, including opening and closing prices, daily highs and lows, volume, and changes. Use it to analyze market trends, evaluate trading strategies, and make informed investment decisions.
 
+**Important Notes**
+- You must specify the `symbol` in the `where` clause to query this table.
+- History is limited to the last 121 months (~10 years).
+- Symbol types are defined in [finance_quote](./finance_quote).
+
 ## Examples
 
 ### Johnson & Johnson daily price history (most recent first)
