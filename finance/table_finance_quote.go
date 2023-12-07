@@ -2,6 +2,7 @@ package finance
 
 import (
 	"context"
+	"strings"
 
 	"github.com/piquette/finance-go/quote"
 
@@ -80,6 +81,10 @@ func listQuote(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateData) 
 	symbol := quals["symbol"].GetStringValue()
 	q, err := quote.Get(symbol)
 	if err != nil {
+		// Return nil, nil for notfound error
+		if strings.Contains(err.Error(), "Can't find quote for symbol") {
+			return nil, nil
+		}
 		plugin.Logger(ctx).Error("finance_quote.listQuote", "query_error", err)
 		return nil, err
 	}
