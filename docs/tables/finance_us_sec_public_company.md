@@ -16,31 +16,49 @@ The `finance_us_sec_public_company` table provides insights into US SEC Public C
 ### List public companies
 Explore which public companies are listed in the U.S. Securities and Exchange Commission's database. This is useful for gaining insights into the landscape of publicly traded companies.
 
-```sql
+```sql+postgres
 select
   *
 from
   finance_us_sec_public_company
 order by
-  name
+  name;
+```
+
+```sql+sqlite
+select
+  *
+from
+  finance_us_sec_public_company
+order by
+  name;
 ```
 
 ### Find a company by symbol
 Discover the details of a specific company by using its unique symbol. This can be useful to quickly gain insights into a company's financial data without having to search through extensive databases.
 
-```sql
+```sql+postgres
 select
   *
 from
   finance_us_sec_public_company
 where
-  symbol = 'AAPL'
+  symbol = 'AAPL';
+```
+
+```sql+sqlite
+select
+  *
+from
+  finance_us_sec_public_company
+where
+  symbol = 'AAPL';
 ```
 
 ### Find a company by name
 Discover the specifics of a particular company by searching using its name. This can be useful for gaining insights into a company's financial information, which can be beneficial for investment decisions or competitive analysis.
 
-```sql
+```sql+postgres
 select
   *
 from
@@ -48,13 +66,24 @@ from
 where
   name ilike '%apple%'
 order by
-  name
+  name;
+```
+
+```sql+sqlite
+select
+  *
+from
+  finance_us_sec_public_company
+where
+  name like '%apple%'
+order by
+  name;
 ```
 
 ### "Apple"-ish companies with their last closing price
 Discover companies with names similar to "Apple" and gain insights into their latest closing prices. This query can be used to track and compare the financial performance of similarly named companies in the market.
 
-```sql
+```sql+postgres
 select
   c.symbol,
   c.name,
@@ -66,5 +95,20 @@ where
   c.symbol = f.symbol
   and c.name ilike '%apple%'
 order by
-  c.symbol
+  c.symbol;
+```
+
+```sql+sqlite
+select
+  c.symbol,
+  c.name,
+  f.*
+from
+  finance_us_sec_public_company as c,
+  finance_us_sec_filer as f
+where
+  c.symbol = f.symbol
+  and lower(c.name) like '%apple%'
+order by
+  c.symbol;
 ```

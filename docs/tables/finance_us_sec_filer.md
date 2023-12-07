@@ -19,11 +19,20 @@ The `finance_us_sec_filer` table provides insights into US SEC Filers within the
 ### Get filer details for Apple
 Explore comprehensive information about a specific company listed on the U.S. Securities and Exchange Commission (SEC) by its stock symbol. This is particularly useful for financial analysis or investment decision-making.
 
-```sql
+```sql+postgres
 select
   *
 from
   finance_us_sec_filer
 where
-  symbol = 'AAPL'
+  symbol = 'AAPL';
+```
+
+```sql+sqlite
+select
+  *
+from
+  finance_us_sec_filer
+where
+  symbol = 'AAPL';
 ```

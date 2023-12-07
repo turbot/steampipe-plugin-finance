@@ -21,7 +21,7 @@ The `finance_quote_hourly` table provides insights into hourly financial data. A
 ### Apple hourly price history (most recent first)
 Analyze the hourly closing prices of Apple's stock to understand its recent performance trends. This can help in making informed investment decisions by identifying patterns or changes in the stock's value.
 
-```sql
+```sql+postgres
 select
   timestamp,
   close
@@ -30,13 +30,25 @@ from
 where
   symbol = 'AAPL'
 order by
-  timestamp desc
+  timestamp desc;
+```
+
+```sql+sqlite
+select
+  timestamp,
+  close
+from
+  finance_quote_hourly
+where
+  symbol = 'AAPL'
+order by
+  timestamp desc;
 ```
 
 ### Hourly prices for Amazon on April 29th, 2020
 Explore the fluctuation of Amazon's stock prices on a specific date, April 29th, 2020, by analyzing the closing prices for each hour. This can assist in understanding the stock's performance and volatility throughout that day.
 
-```sql
+```sql+postgres
 select
   timestamp,
   close
@@ -46,5 +58,18 @@ where
   symbol = 'AMZN'
   and date(timestamp) = '2020-04-29'
 order by
-  timestamp
+  timestamp;
+```
+
+```sql+sqlite
+select
+  timestamp,
+  close
+from
+  finance_quote_hourly
+where
+  symbol = 'AMZN'
+  and date(timestamp) = '2020-04-29'
+order by
+  timestamp;
 ```
