@@ -8,6 +8,7 @@ name: finance
 description: Steampipe plugin to query financial data including quotes and public company information.
 og_description: Query financial data with SQL! Open source CLI. No DB required.
 og_image: "/images/plugins/turbot/finance-social-graphic.png"
+engines: ["steampipe", "sqlite", "postgres", "export"]
 ---
 
 # Finance + Steampipe
