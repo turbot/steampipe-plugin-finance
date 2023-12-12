@@ -2,13 +2,10 @@ package finance
 
 import (
 	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
-	"github.com/turbot/steampipe-plugin-sdk/v5/plugin/schema"
 )
 
 type financeConfig struct {
 }
-
-var ConfigSchema = map[string]*schema.Attribute{}
 
 func ConfigInstance() interface{} {
 	return &financeConfig{}
