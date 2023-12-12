@@ -13,7 +13,7 @@ engines: ["steampipe", "sqlite", "postgres", "export"]
 
 # Finance + Steampipe
 
-[Steampipe](https://steampipe.io) is an open source CLI to instantly query cloud APIs using SQL.
+[Steampipe](https://steampipe.io) is an open-source zero-ETL engine to instantly query cloud APIs using SQL.
 
 Financial data is queried from multiple sources including [Yahoo Finance](https://finance.yahoo.com/) and the [US SEC Edgar](https://www.sec.gov/edgar.shtml) service.
 
