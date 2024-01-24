@@ -6,7 +6,7 @@ import (
 )
 
 type financeConfig struct {
-	IEXAPIToken *string `cty:"iex_api_token"`
+	IEXAPIToken *string `hcl:"iex_api_token,optional"`
 }
 
 var ConfigSchema = map[string]*schema.Attribute{
