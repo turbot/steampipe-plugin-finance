@@ -12,7 +12,6 @@ func Plugin(ctx context.Context) *plugin.Plugin {
 		Name: "steampipe-plugin-finance",
 		ConnectionConfigSchema: &plugin.ConnectionConfigSchema{
 			NewInstance: ConfigInstance,
-			Schema:      ConfigSchema,
 		},
 		DefaultTransform: transform.FromGo(),
 		DefaultConcurrency: &plugin.DefaultConcurrencyConfig{

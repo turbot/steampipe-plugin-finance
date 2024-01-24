@@ -8,11 +8,12 @@ name: finance
 description: Steampipe plugin to query financial data including quotes and public company information.
 og_description: Query financial data with SQL! Open source CLI. No DB required.
 og_image: "/images/plugins/turbot/finance-social-graphic.png"
+engines: ["steampipe", "sqlite", "postgres", "export"]
 ---
 
 # Finance + Steampipe
 
-[Steampipe](https://steampipe.io) is an open source CLI to instantly query cloud APIs using SQL.
+[Steampipe](https://steampipe.io) is an open-source zero-ETL engine to instantly query cloud APIs using SQL.
 
 Financial data is queried from multiple sources including [Yahoo Finance](https://finance.yahoo.com/), [US SEC Edgar](https://www.sec.gov/edgar.shtml) and the [IEX Cloud](https://iexcloud.io/documentation/)service.
 
@@ -68,7 +69,7 @@ connection "finance" {
 }
 ```
 
-- `iex_api_token` (Optional) - An additional header name and its corresponding value to be sent to the server. If the header name is configured, the value must not be empty.
+- `iex_api_token` (Optional) - An additional header name and it's corresponding value to be sent to the server. If the header name is configured, the value must not be empty.
 
 ## Get involved
 
