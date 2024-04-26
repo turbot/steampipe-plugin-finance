@@ -3,7 +3,7 @@ package finance
 import (
 	"context"
 
-	"github.com/piquette/edgr/core"
+	"github.com/turbot/edgr/core"
 
 	"github.com/turbot/steampipe-plugin-sdk/v5/grpc/proto"
 	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
