@@ -1,3 +1,18 @@
+## v0.9.0 [2024-07-26]
+
+_What's new?_
+
+- Added support for [iex_api_token](https://iexcloud.io/documentation/reference/glossary.html#token-api-token) connnection config parameter to access `finance_us_sec_public_company` table data. ([#43](https://github.com/turbot/steampipe-plugin-finance/pull/43))
+
+_Enhancements_
+
+- The Plugin and the Steampipe Anywhere binaries are now built with the `netgo` package. ([#61](https://github.com/turbot/steampipe-plugin-finance/pull/61))
+- Added the `version` flag to the plugin's Export tool. ([#65](https://github.com/turbot/steampipe-export/pull/65))
+
+_Dependencies_
+
+- Recompiled plugin with [steampipe-plugin-sdk v5.10.1](https://github.com/turbot/steampipe-plugin-sdk/blob/main/CHANGELOG.md#v5100-2024-04-10) that adds support for connection key columns. ([#54](https://github.com/turbot/steampipe-plugin-finance/pull/54))
+
 ## v0.8.0 [2023-12-12]
 
 _What's new?_
