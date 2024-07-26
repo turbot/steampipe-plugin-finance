@@ -11,6 +11,8 @@ The US Securities and Exchange Commission (SEC) Public Company is a regulated en
 
 The `finance_us_sec_public_company` table provides insights into US SEC Public Companies within the finance sector. As a financial analyst or investor, explore company-specific details through this table, including financial data, filings, and associated metadata. Utilize it to uncover information about companies, such as their financial health, regulatory compliance, and significant developments that could impact their financial status.
 
+**Note:** To query this table, you must configure an API token in the `~/.steampipe/config/finance.spc` file, as instructed in the documentation (https://hub.steampipe.io/plugins/turbot/finance#documentation).
+
 ## Examples
 
 ### List public companies
