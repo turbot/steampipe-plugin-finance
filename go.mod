@@ -1,15 +1,14 @@
 module github.com/turbot/steampipe-plugin-finance
 
 go 1.21.0
-
-toolchain go1.21.1
+toolchain go1.22.5
 
 require (
 	github.com/piquette/finance-go v1.1.1-0.20230807033903-430a57233430
 	github.com/shopspring/decimal v1.2.0
 	github.com/turbot/edgr v0.0.1
 	github.com/turbot/steampipe-plugin-sdk v1.8.3
-	github.com/turbot/steampipe-plugin-sdk/v5 v5.10.1
+	github.com/turbot/steampipe-plugin-sdk/v5 v5.10.3
 )
 
 require (
