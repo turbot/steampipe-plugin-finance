@@ -9,7 +9,7 @@ require (
 	github.com/shopspring/decimal v1.2.0
 	github.com/turbot/edgr v0.0.1
 	github.com/turbot/steampipe-plugin-sdk v1.8.3
-	github.com/turbot/steampipe-plugin-sdk/v5 v5.11.7
+	github.com/turbot/steampipe-plugin-sdk/v5 v5.12.0
 )
 
 require (
