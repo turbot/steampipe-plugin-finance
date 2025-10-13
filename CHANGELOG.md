@@ -1,3 +1,10 @@
+## v1.2.0 [2025-10-13]
+
+_Dependencies_
+
+- Recompiled plugin with Go version `1.24`. ([#83](https://github.com/turbot/steampipe-plugin-finance/pull/83))
+- Recompiled plugin with [steampipe-plugin-sdk v5.13.1](https://github.com/turbot/steampipe-plugin-sdk/blob/develop/CHANGELOG.md#v5131-2025-09-25) that addresses critical and high vulnerabilities in dependent packages. ([#87](https://github.com/turbot/steampipe-plugin-finance/pull/87))
+
 ## v1.1.1 [2025-04-18]
 
 _Bug fixes_
