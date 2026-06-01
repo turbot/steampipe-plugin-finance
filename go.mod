@@ -4,7 +4,7 @@ go 1.26.0
 
 require (
 	github.com/piquette/finance-go v1.1.1-0.20230807033903-430a57233430
-	github.com/shopspring/decimal v1.2.0
+	github.com/shopspring/decimal v1.4.0
 	github.com/turbot/edgr v0.0.1
 	github.com/turbot/steampipe-plugin-sdk v1.8.3
 	github.com/turbot/steampipe-plugin-sdk/v5 v5.14.0
