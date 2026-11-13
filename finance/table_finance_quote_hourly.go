@@ -7,7 +7,7 @@ import (
 	"github.com/piquette/finance-go/chart"
 	"github.com/piquette/finance-go/datetime"
 
-	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v6/plugin"
 )
 
 func tableFinanceQuoteHourly(ctx context.Context) *plugin.Table {

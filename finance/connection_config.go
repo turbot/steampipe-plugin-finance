@@ -1,18 +1,11 @@
 package finance
 
 import (
-	"github.com/turbot/steampipe-plugin-sdk/plugin/schema"
-	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v6/plugin"
 )
 
 type financeConfig struct {
 	IEXAPIToken *string `hcl:"iex_api_token,optional"`
-}
-
-var ConfigSchema = map[string]*schema.Attribute{
-	"iex_api_token": {
-		Type: schema.TypeString,
-	},
 }
 
 func ConfigInstance() interface{} {
@@ -21,9 +14,9 @@ func ConfigInstance() interface{} {
 
 // GetConfig :: retrieve and cast connection config from query data
 func GetConfig(connection *plugin.Connection) financeConfig {
-	if connection == nil || connection.Config == nil {
+	if connection == nil || connection.GetConfig() == nil {
 		return financeConfig{}
 	}
-	config, _ := connection.Config.(financeConfig)
+	config, _ := connection.GetConfig().(financeConfig)
 	return config
 }
