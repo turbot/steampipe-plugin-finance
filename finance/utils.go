@@ -5,9 +5,9 @@ import (
 
 	"github.com/shopspring/decimal"
 
-	"github.com/turbot/steampipe-plugin-sdk/v5/grpc/proto"
-	"github.com/turbot/steampipe-plugin-sdk/v5/plugin"
-	"github.com/turbot/steampipe-plugin-sdk/v5/plugin/transform"
+	"github.com/turbot/steampipe-plugin-sdk/v6/grpc/proto"
+	"github.com/turbot/steampipe-plugin-sdk/v6/plugin"
+	"github.com/turbot/steampipe-plugin-sdk/v6/plugin/transform"
 )
 
 func usSecHistoryColumns() []*plugin.Column {
@@ -30,7 +30,6 @@ func symbolString(ctx context.Context, d *plugin.QueryData, _ *plugin.HydrateDat
 	s := quals["symbol"].GetStringValue()
 	return s, nil
 }
-
 
 func decimalToDouble(ctx context.Context, d *transform.TransformData) (interface{}, error) {
 	dec := d.Value.(decimal.Decimal)
